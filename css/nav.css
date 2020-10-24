@@ -1,0 +1,236 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* NAV BAR */
+
+.headerBar {
+ opacity: 98%;
+ background-color: #F4CA66;
+ box-shadow: 1px 1px 6px gray;
+ position: fixed; /* Set the header bar to fixed position */
+ top: 0;
+ width: 100%;
+ height: 70px;
+ margin: 0px;
+ left: 0px;
+ z-index: 1000;
+
+}
+
+.headerBar nav {
+  position: absolute;
+  right: 2%;
+  top: 25%;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  border: 3px;
+}
+
+/*
+Inspired by: https://codepen.io/priosoft/pen/dMryaY
+*/
+
+.headerBar a {
+  color: white;
+}
+
+.headerBar a:hover {
+  color: white;
+}
+
+
+nav li a {
+  border-color: #F4CA66;
+  color: white;
+  border: 1px solid white;
+  background-image: -webkit-linear-gradient(45deg, #4e5ee8 50%, transparent 50%);
+  background-image: linear-gradient(45deg, #4e5ee8 50%, transparent 50%);
+  background-position: 100%;
+  background-size: 400%;
+  -webkit-transition: background 300ms ease-in-out;
+  transition: background 300ms ease-in-out;
+  border-radius:10px;
+  display:inline-block;
+  cursor:pointer;
+  font-family: 'Noto Sans', sans-serif;
+  font-size:16px;
+  padding:10px 10px;
+  font-weight: 700;
+  text-decoration:none;
+  margin: 0px 5px;
+  text-align: center;
+
+}
+nav li a:hover {
+  background-position: 0;
+  transition: .5s ease;
+  color: white;
+}
+
+nav li a:active {
+  position:relative;
+  top: 1px;
+}
+
+.headerBar img {
+  display: inline-block;
+
+  vertical-align: top;
+  height:  65px;
+  margin-left: 50px;
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+
+}
+
+.headerBar h1 {
+  font-size: 150%;
+  font-style: normal;
+  letter-spacing: 1.4px;
+  width: max-content;
+}
+
+/*
+SUB TITLE ADAPTED FROM http://csc170.org/examples/gilacqua/project3/css/styles.css
+*/
+
+.sub-title{
+  font-size: 12px;
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 300;
+  color: white;
+  margin: 0;
+  position: absolute;
+  left: 90px;
+  top: 35px;
+  padding-top: 5px;
+  z-index: 30;
+  border-top: 1px solid white;
+  letter-spacing: 1px;
+}
+
+.sub-title:before{
+  content: "";
+  width: 178px;
+  display: block;
+  overflow: hidden;
+}
+
+/*
+End of subtitle
+*/
+
+.headerBar a {
+  text-decoration: none;
+}
+
+.is-current {
+  background-color: #4e5ee8;
+  color: white;
+}
+
+/* END OF NAV BAR */
+
+@media (max-width: 900px) {
+
+
+  .headerBar {
+    position: relative;
+    top: 0;
+    display: block;
+    height: auto;
+    width: 100%;
+  }
+
+  .headerBar a {
+    border: none;
+  }
+
+  .title-word {
+    display: none;
+  }
+
+  .sub-title{
+    display: none;
+    border: none;
+  }
+
+    .sub-title:before{
+    width: 0;
+  }
+
+   .headerBar nav a {
+    border: 1px solid white;
+  }
+
+
+}
+
+
+@media (max-width: 687px) {
+
+
+  .headerBar {
+    position: relative;
+    top: 0;
+    display: block;
+    height: auto;
+    width: 100%;
+  }
+
+  .headerBar nav {
+    position: static;
+
+  }
+
+  .headerBar h1 {
+    width: 100%;
+  }
+
+  .headerBar img {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-left: 0px;
+    height: 100px;
+    filter: none;
+  }
+
+  .headerBar ul {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: static;
+  }
+
+  .headerBar nav a {
+    color: black;
+    border: 1px solid black;
+  }
+
+  .headerBar li {
+    margin: 4px;
+
+  }
+
+  li a {
+    width: 50vw;
+  }
+
+  .box-area {
+    z-index: 1;
+  }
+
+  .is-current {
+  background-color: #4e5ee8;
+  color: white;
+}
+}
+
+

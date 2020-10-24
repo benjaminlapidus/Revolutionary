@@ -1,0 +1,491 @@
+/*
+Benjamin Lapidus
+April 2020
+CSC170 - Project 3
+*/
+
+body {
+ background-color: #27282e;
+ font-family: 'Noto Sans', sans-serif;
+ background-image: url('../images/background.png');
+ background-position: center;
+ background-repeat: repeat-y;
+ background-size: 100%;
+} 
+
+.container, .ref, .quote, article, header, main, .tablewrapper { grid-column: 1 / 3;}
+
+/*
+Container "trick" - keeps content centered 
+in viewport and not to exceed 1000px
+*/
+
+.container {
+	margin: 0 auto;
+	width: 65%;
+	max-width: 1000px;
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	background-color: rgba(67, 69, 79, .94);
+	padding: 10px;
+  border-radius: 10px;
+}
+
+/*
+Dynamic quote Box
+*/
+
+.quote {
+  padding: 10px;
+  margin: 75px 10px 10px 10px;
+  background-color: black;
+  border-radius: 10px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: 0.3s ease;
+}
+
+#turing {
+  background-image: url(../images/turing-cover.jpg);
+}
+
+#einstein {
+  background-image: url(../images/einstein-cover.png);
+}
+
+#neumann {
+  background-image: url(../images/neumann-cover.png);
+}
+
+#miyazaki {
+  background-image: url(../images/miyazaki-cover.jpg);
+}
+
+.quote h2 {
+  font-family: 'IM Fell English', serif;
+  color: #D9D9D9;
+  text-align: center;
+  font-style: italic;
+  font-size: 50px;
+  padding: 0px 100px 0px 100px;
+  margin: 150px 0px 150px 0px;
+}
+
+
+.quote:hover { box-shadow: inset 0 0 0 50px #F4CA66;}
+
+.quote:hover h2 {
+  color: white;
+  text-shadow: 3px 3px black;
+  transition: 1.5s ease;
+}
+
+/*
+Image and figure formatting
+*/
+
+img {
+	-webkit-filter: brightness(85%);
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	-ms-transition: all 1s ease;
+	transition: all 1s ease;
+  border-radius: 10px;
+}
+
+img:hover {
+  -webkit-filter: brightness(100%);
+  transition: .5s ease;
+}
+
+figure {
+  padding: 16px 12px;
+  background-color: #392759;
+  color: #F4CA66;
+  border-radius: 10px;
+  align-self: center;
+  clear: both; 
+  text-align: center; 
+  margin-left: auto; 
+  margin-right: auto;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+figcaption {
+  color: #E8f0ff;
+  text-align: center;
+}
+
+.fig2 {
+  margin: 5px;}
+
+/*
+Overview Section
+*/
+
+article {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: #595b61;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+article strong {
+  font-size: 120%;
+  color: #131a26;
+  padding: 4px;
+  border-radius: 2px;
+  background-color: #f4ca66
+}
+
+article p {
+	margin: 0px 10px 10px 10px;
+	color: #E8F0FF;
+	font-size: 110%;
+	text-align: right;
+	line-height: 1.8;
+}
+
+article h1 {
+  color: white;
+  font-size: 220%;
+  text-align: right;
+  margin: 10px 0px;
+}
+
+/*
+Italic text sylized to add yellow 
+highlight and set font style to non-italic
+*/
+
+em {
+	color: #131a26;
+  background-color: #f4ca66;
+  font-style: initial;
+  padding: 3px 5px;
+  border-radius: 2px;
+}
+
+/*
+Paragraph default formatting.
+*/ 
+p {
+	line-height: 1.9;
+	color: #e8f0ff;
+	padding-left: 14px;
+	text-align: left;
+	margin-top: 8px;
+}
+
+/*
+Main body content
+*/
+
+main {  
+  display: grid;
+  grid-template-columns: 2fr 1fr;  
+  margin: 8px;
+}
+
+main h3, aside h2 {
+  color: white;
+  font-size: 215%;
+  margin: 0px;
+  transition: .2s ease;
+
+}
+main h3:hover {
+  color: #E8f0FF;
+  text-shadow: 3px 3px black;
+  font-size: 216%;
+  transition: .3s ease;
+}
+
+.p1, .p2, .p3, .p4, .p6 { grid-column: 1 / 3;}
+
+.p5, .p7 { grid-column: 1 / 2;}
+
+/*
+Tributes side panel
+*/
+
+.tributes {
+  background-color: #131a26;
+  line-height: 44px;
+  text-align: left;
+  color: #e8f0ff;
+  font-size: 160%;
+  border: 8px solid #392759;
+  border-radius: 7px;
+  margin-right: 8px;
+  margin-left: 10px;
+}
+
+.tributes li {
+  font-family: 'IM Fell English', serif;
+  letter-spacing: 3px;
+  color: #131a26;
+  margin: 20px;
+  padding: 5px 1px 5px 8px;
+  border-radius: 5px;
+  background-color: #f4ca66;
+  opacity: 60%;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.tributes h2 {
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+  color: white;
+  text-align: center;
+  font-size: 200%;
+  background-color: #F4ca66;
+  opacity: 80%;
+  padding: 25px 4px 0px 4px;
+  padding-bottom: 10px; 
+  margin-top: 0px;
+  margin-bottom: 50px;
+  transition: .6s ease;
+  text-shadow: 1px 1px black;
+}
+
+.tributes li:hover {
+  opacity: 100%;
+  font-size: 103%;
+  transition: .5s ease;
+}
+
+.tributes h2:hover {
+  color: #E8f0FF;
+  text-shadow: 3px 3px black;
+  transition: .2s ease;
+  opacity: 100%;
+}
+
+.tributes ul {
+  height: 83%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  align-content: center;
+  justify-content: space-between;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0px;
+}
+
+/*
+Aside section is the center table
+*/ 
+
+.tablewrapper {
+  padding-bottom: 20px;
+}
+
+aside {
+  background-color: #131a26;
+  padding: 8px 8px;
+  border-radius: 7px;
+  text-align: center;
+  color: #E8F0FF;
+  overflow: hidden;
+  min-width: 0;
+}
+
+aside h2 {
+  letter-spacing: 2px;
+  color: #131a26;
+  padding: 4px;
+  margin: 8px;
+  border-radius: 2px;
+  background-color: #f4ca66
+}
+
+aside h2:hover { 
+  color: #131A26;
+  text-shadow: 1px 1px black;
+  font-size: 216%;
+  transition: .3s ease;
+}
+
+table.darkTable {
+  border: 2px solid #000000;
+  background-color: #4A4A4A;
+  width: 100%;
+  height: 200px;
+  text-align: center;
+  border-collapse: collapse;
+  color: #E8F0FF;
+  font-size: 105%;
+  table-layout: auto;
+}
+
+table.darkTable td, table.darkTable th {
+  border: 1px solid #4A4A4A;
+  padding: 3px 2px;
+}
+
+table.darkTable tbody td { color: #E6E6E6;}
+
+table.darkTable tr:nth-child(even) { background: #888888;}
+
+/*
+Footer - Citations and sources
+*/
+
+.ref {
+  text-align: center;
+  background-color: #595b61;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.ref ul {
+  margin-bottom: 8px;
+}
+
+.ref h2 {
+  color: #bcc2cc;
+  font-size: 150%;
+  text-align: center;
+  padding-left: 15px;
+  margin: 8px 0px 0px 0px;
+}
+
+.flow-layout {
+  font-size: 14px;
+  font-style: italic;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  padding-left: 0;
+}
+
+.flow-layout li {
+  color: #e8f0ff;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
+  list-style-type: none;
+  padding: 10px;
+  border-style: solid;
+  border-radius: 4px;
+  border-color: #392759;
+  border-width: 4px;
+  background: #131a26;
+  margin: 10px 8px 0px 8px;
+}
+
+a h1 {color: #ffffff;}
+
+a { color: #4e5ee8;}
+
+a:hover { color: #7b93db;}
+
+.page-footer {
+  margin-top: 24px;
+  width: 100%;
+  background-color: #141417;
+}
+
+.page-footer ul {
+  color: #6e6e6e;
+  font-family: 'Noto Sans', sans-serif;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.page-footer li {
+  display: inline-block;
+  padding: 10px;
+}
+
+@media (max-width: 1100px) {
+
+  .tributes {
+    display: none;
+  }
+
+  .p5, .p7 {
+    grid-column: 1 / 3;
+  }
+
+  figure {
+    background-color: transparent;
+  }
+}
+
+@media (max-width: 900px) {
+
+  body {
+   background-image: none;
+ }
+
+ article {
+  display: block;
+}
+
+article p {
+  text-align: left;
+}
+
+article h1 {
+ text-align: center;
+}
+
+body h3 {
+ text-align: left;
+ margin-top: 16px;
+}
+
+body p {
+  margin-bottom: 16px;
+}
+
+.quote {
+  display: none;
+}
+
+.page-footer ul {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.fig2{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+}
+
+@media (max-width: 700px) {
+  .container {
+    width: 80%;
+  }
+  .flow-layout {
+    display: block;
+  }
+  .flow-layout li{
+    margin: 8px;
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    width: 95%;
+  }
+}
+
